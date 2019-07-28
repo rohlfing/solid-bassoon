@@ -1,3 +1,5 @@
+#include <stdint.h>
+
 #include "error.h"
 
 /* Typdef convient names for message components */
@@ -21,4 +23,4 @@ typedef uint8_t vlct_t;
 #define VLCT_MAX        0x7F
 
 /* Callback type used between nodes */
-typedef err_t (*cmnd_cb_t)(cmnd_t , note_t , vlct_t );
+typedef err_t (*cmnd_cb_t)(void * , cmnd_t , note_t , vlct_t );

@@ -7,9 +7,9 @@ char const * error_strings[NUM_ERR] = {
     [ERR_NONE]      = "No Error",
     
     [ERR_CMND_UNSP] = "Command unsupported",
-    
     [ERR_NOTE_OOB]  = "Note out of bounds",
     [ERR_VLCT_OOB]  = "Velocity out of bounds",
+    [ERR_NO_CB]     = "No callback defined",
 
     [ERR_FATAL]     = "Fatal error. Program terminated"
 };

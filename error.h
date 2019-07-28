@@ -3,12 +3,12 @@ typedef enum{
 
     /* Command errors */
     ERR_CMND_UNSP,
-
     /* Note errors */
     ERR_NOTE_OOB,
-
-    /* Velocity Errors */
+    /* Velocity errors */
     ERR_VLCT_OOB,
+    /* Other errors */
+    ERR_NO_CB,
 
     /* Fatal error and error count must be last */
     ERR_FATAL,
