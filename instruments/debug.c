@@ -35,7 +35,7 @@ err_t debug_callback(void * inst, cmnd_t c, note_t n, vlct_t v){
            "Command:    %#4x\n"
            "Note:       %#4x\n"
            "Velocity:   %#4x\n"
-           "\n");
+           "\n", this->id, (int)c, (int)n, (int)v);
 
     return ERR_NONE;
 }

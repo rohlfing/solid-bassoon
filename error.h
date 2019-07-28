@@ -1,3 +1,6 @@
+#ifndef ERROR_H
+# define ERROR_H
+
 typedef enum{
     ERR_NONE = 0,
 
@@ -16,3 +19,5 @@ typedef enum{
 } err_t;
 
 void err_print(err_t error);
+
+#endif

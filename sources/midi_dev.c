@@ -52,7 +52,7 @@ err_t midi_dev_run(void * inst){
         cmnd = fgetc(midi_in);
         note = fgetc(midi_in);
         vlct = fgetc(midi_in);
-        
+       
         error = this->callback(this->dest_inst, cmnd, note, vlct);
         
         if(error != ERR_NONE)

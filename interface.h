@@ -1,3 +1,6 @@
+#ifndef INTERFACE_H
+# define INTERFACE_H
+
 #include <stdint.h>
 
 #include "error.h"
@@ -26,3 +29,5 @@ typedef uint8_t vlct_t;
 typedef err_t (*cmnd_cb_t)(void * , cmnd_t , note_t , vlct_t );
 /* Function type for instruments */
 typedef err_t (*inst_run_t)(void * );
+
+#endif
