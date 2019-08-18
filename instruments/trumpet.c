@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #include "trumpet.h"
+#include "hw_drivers/hw_trumpet.h"
 
 typedef struct{
     int id; 
@@ -40,6 +41,8 @@ void * trumpet_init(){
     inst->id = num_trmpt_insts;
     ++num_trmpt_insts;
 
+    hw_trumpet_init();
+
     return inst;
 }
 
@@ -64,7 +67,8 @@ err_t trumpet_callback(void * inst, cmnd_t c, note_t n, vlct_t v){
     rep[3] = '\0';
 
     if(c == CMND_DIR_DOWN)
-        printf("%s\n", rep);
+        hw_trumpet_play(f);
+        //printf("%s\n", rep);
 
     this = (trmpt_inst_t*)inst;
 
