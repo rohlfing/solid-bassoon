@@ -3,6 +3,7 @@
 
 typedef enum{
     ERR_NONE = 0,
+    ERR_DONE,
 
     /* Command errors */
     ERR_CMND_UNSP,

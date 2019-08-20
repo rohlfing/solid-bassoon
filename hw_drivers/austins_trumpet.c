@@ -48,7 +48,10 @@ void hw_trumpet_init(){
 }
 
 void hw_trumpet_play(uint8_t valves){
-    glbl_valves = valves;
+    if(0xff == valves)
+        *(gpio_regs + GPCLR0) = ALL_GPIO_MASK;
+    else
+        glbl_valves = valves;
 }
 
 /* TODO ADR ensure 'pwm' pins aren't left in a bad state */

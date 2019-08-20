@@ -54,7 +54,13 @@ void trumpet_free(void * inst){
 err_t trumpet_callback(void * inst, cmnd_t c, note_t n, vlct_t v){
     trmpt_inst_t * this;
     uint8_t f;
-    char rep[4];
+    char rep[4]; /* String representation of valves */
+
+    /* End program on lowest piano note */
+    if(NOTE_LOWEST == n){
+        hw_trumpet_play(0xff);
+        return ERR_DONE;
+    }
 
     if(n > NOTE_TRMPT_HIGH || n < NOTE_TRMPT_LOW)
         return ERR_NOTE_OOB;

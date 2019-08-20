@@ -57,6 +57,8 @@ err_t midi_dev_run(void * inst){
         
         if(error != ERR_NONE)
             err_print(error);
+        if(ERR_DONE == error || ERR_FATAL == error)
+            break;
     }
 
     return error;
